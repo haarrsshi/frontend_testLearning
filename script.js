@@ -59,26 +59,22 @@ addBoxBtn.addEventListener("click", function () {
 
 //Feature 5
 
-let Counter2 = 0;
-
+let counter2 = 0;
 const counterValue = document.getElementById("counterValue");
 const plusBtn = document.getElementById("plusBtn");
 const minusBtn = document.getElementById("minusBtn");
-const errorMsg = document.getElementById("errorMsg");
 
-plusBtn.addEventListener("click", function () {
-    Counter2++;
-    counterValue.textContent = Counter2;
-    errorMsg.textContent = "";
+plusBtn.addEventListener("click", function(){
+    counter2++;
+    counterValue.textContent = counter2;
 });
 
-minusBtn.addEventListener("click", function () {
-    if (Counter2 > 0) {
-        Counter2--;
-        counterValue.textContent = Counter2;
-        errorMsg.textContent = "";
-    } else {
-        errorMsg.textContent = "Achtung, weniger als 0 geht nicht";
+minusBtn.addEventListener("click", function(){
+    if (counter2 > 0){
+        counter2--;
+        counterValue.textContent = counter2;
+    }else{
+        alert("Error!");
     }
 });
 
